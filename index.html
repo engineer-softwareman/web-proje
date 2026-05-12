@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Arif Babayev</title>
+<title>Ana Sayfa</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+
 body{
-background:#f1f5f9;
+background:#0f172a;
+color:white;
+font-family:Arial;
+}
+
+.navbar{
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 .hero{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-padding:60px;
+background:linear-gradient(135deg,#111827,#1e293b);
+padding:100px;
 text-align:center;
 }
 
 .card{
-border-radius:15px;
-transition:0.3s;
+background:#1e293b;
+border:none;
+border-radius:20px;
+transition:0.4s;
 }
 
 .card:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px rgba(0,0,0,0.3);
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
+
+#typing{
+color:#38bdf8;
+font-weight:bold;
+height:50px;
+}
+
+footer{
+margin-top:50px;
+}
+
 </style>
 
 </head>
@@ -36,93 +61,201 @@ box-shadow:0 0 20px rgba(0,0,0,0.3);
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div class="container">
-<a class="navbar-brand" href="index.html">Arif</a>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+Arif Babayev
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
 <span class="navbar-toggler-icon"></span>
+
 </button>
 
 <div class="collapse navbar-collapse" id="menu">
+
 <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
+
+<li class="nav-item">
+<a class="nav-link active" href="index.html">Hakkında</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="cv.html">CV</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="sehrim.html">Şehrim</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="ilgi.html">İlgi Alanları</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="iletisim.html">İletişim</a>
+</li>
+
+<li class="nav-item">
 <a class="nav-link text-warning" href="login.html">Login</a>
 </li>
-<li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-<li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-<li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-<li class="nav-item"><a class="nav-link" href="mirasimiz.html">Miras</a></li>
-<li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi</a></li>
-<li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+
 </ul>
+
 </div>
+
 </div>
+
 </nav>
 
 <!-- HERO -->
+
 <div class="hero">
-<h1>Merhaba, Ben Arif Babayev</h1>
-<p>Bilgisayar Mühendisliği Öğrencisi</p>
-</div>
 
-<!-- HAKKINDA -->
-<div class="container mt-5">
-<h2 class="text-center mb-4">👨‍💻 Hakkımda</h2>
+<h1 class="display-2 fw-bold">
+Arif Babayev
+</h1>
 
-<p class="text-center">
-Yazılım geliştirmeye ilgi duyan birinci sınıf bilgisayar mühendisliği öğrencisiyim.
-Modern web teknolojileri ve kullanıcı deneyimi üzerine çalışıyorum.
+<h2 id="typing" class="mt-3"></h2>
+
+<p class="lead mt-4">
+Bilgisayar Mühendisliği öğrencisi ve modern web geliştiricisi
 </p>
+
+<div class="mt-4">
+
+<i class="fa-brands fa-html5 fa-3x m-2"></i>
+
+<i class="fa-brands fa-css3-alt fa-3x m-2"></i>
+
+<i class="fa-brands fa-js fa-3x m-2"></i>
+
+<i class="fa-brands fa-php fa-3x m-2"></i>
+
 </div>
 
-<!-- YETENEKLER -->
+</div>
+
+<!-- HAKKIMDA -->
+
 <div class="container mt-5">
-<h3 class="text-center mb-4">🚀 Yeteneklerim</h3>
 
-<div class="row text-center">
-
-<div class="col-md-4">
-<div class="card p-3 shadow">
-<h5>Frontend</h5>
-<p>HTML, CSS, Bootstrap</p>
-</div>
-</div>
+<div class="row g-4">
 
 <div class="col-md-4">
-<div class="card p-3 shadow">
-<h5>Backend</h5>
-<p>PHP, JavaScript</p>
+
+<div class="card shadow p-4 text-center">
+
+<h2>7+</h2>
+
+<p>Site Sayfası</p>
+
 </div>
+
 </div>
 
 <div class="col-md-4">
-<div class="card p-3 shadow">
-<h5>Diğer</h5>
-<p>Problem çözme, ekip çalışması</p>
-</div>
+
+<div class="card shadow p-4 text-center">
+
+<h2>5+</h2>
+
+<p>Kullanılan Teknoloji</p>
+
 </div>
 
 </div>
+
+<div class="col-md-4">
+
+<div class="card shadow p-4 text-center">
+
+<h2>100%</h2>
+
+<p>Responsive Tasarım</p>
+
 </div>
 
-<!-- HEDEFLER -->
-<div class="container mt-5">
-<h3 class="text-center mb-4">🎯 Hedeflerim</h3>
+</div>
 
-<ul class="text-center list-unstyled">
-<li>Full-stack developer olmak</li>
-<li>Modern web uygulamaları geliştirmek</li>
-<li>Global projelerde yer almak</li>
-<li>Senior seviyeye ulasmak</li>
-</ul>
+</div>
+
+<div class="card shadow p-5 mt-5">
+
+<h2>👨‍💻 Hakkımda</h2>
+
+<p class="mt-3">
+
+Yazılım geliştirmeye ilgi duyan bir bilgisayar mühendisliği öğrencisiyim.
+Modern web teknolojileri ile kullanıcı dostu web siteleri geliştirmeyi seviyorum.
+
+</p>
+
+</div>
 
 </div>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-<p>© 2026 Arif Babayev</p>
+
+<footer class="bg-black text-white text-center p-3">
+
+<p>
+© 2026 Arif Babayev | Web Teknolojileri Projesi
+</p>
+
 </footer>
+
+<script>
+
+const text = [
+"Web Developer",
+"Frontend Developer",
+"PHP Developer",
+"Computer Engineering Student"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+if(count === text.length){
+count = 0;
+}
+
+currentText = text[count];
+
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+
+count++;
+index = 0;
+
+setTimeout(type,1000);
+
+}
+else{
+setTimeout(type,100);
+}
+
+})();
+
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

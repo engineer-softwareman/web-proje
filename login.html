@@ -1,110 +1,210 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Login</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-body{
-height:100vh;
-background:linear-gradient(135deg,#020617,#0f172a);
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial;
 }
 
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+overflow:hidden;
+position:relative;
+}
+
+/* ARKA PLAN EFEKTLERİ */
+
+.circle{
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+opacity:0.5;
+}
+
+.circle1{
+width:300px;
+height:300px;
+background:#38bdf8;
+top:-100px;
+left:-100px;
+}
+
+.circle2{
+width:300px;
+height:300px;
+background:#818cf8;
+bottom:-100px;
+right:-100px;
+}
+
+/* LOGIN BOX */
+
 .login-box{
-width:350px;
-padding:30px;
-background:#1e293b;
-border-radius:20px;
-box-shadow:0 0 30px rgba(0,0,0,0.6);
+width:400px;
+padding:50px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:25px;
+box-shadow:0 0 40px rgba(0,0,0,0.4);
+z-index:1;
+}
+
+.login-box h1{
 text-align:center;
+margin-bottom:10px;
+font-size:40px;
+font-weight:bold;
+background:linear-gradient(to right,#38bdf8,#818cf8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-input{
-background:#020617 !important;
-border:none !important;
-color:white !important;
-margin-top:10px;
+.login-box p{
+text-align:center;
+margin-bottom:30px;
+color:#94a3b8;
 }
 
-input:focus{
-box-shadow:0 0 10px #38bdf8;
+.input-box{
+position:relative;
+margin-bottom:25px;
 }
 
-.btn-login{
-background:#22c55e;
-border:none;
+.input-box input{
 width:100%;
-margin-top:15px;
+padding:15px 15px 15px 50px;
+border:none;
+border-radius:12px;
+background:#1e293b;
+color:white;
+font-size:16px;
 }
 
-.error{
-color:#ef4444;
-font-size:14px;
+.input-box input:focus{
+outline:none;
+box-shadow:0 0 15px rgba(56,189,248,0.5);
 }
+
+.input-box i{
+position:absolute;
+top:16px;
+left:15px;
+color:#38bdf8;
+font-size:18px;
+}
+
+.login-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(to right,#38bdf8,#6366f1);
+color:white;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.login-btn:hover{
+transform:scale(1.03);
+}
+
+.back-home{
+text-align:center;
+margin-top:20px;
+}
+
+.back-home a{
+color:#38bdf8;
+text-decoration:none;
+}
+
 </style>
 
 </head>
 
 <body>
 
+<!-- BACKGROUND -->
+
+<div class="circle circle1"></div>
+<div class="circle circle2"></div>
+
+<!-- LOGIN -->
+
 <div class="login-box">
 
-<h2>🔐 Giriş Paneli</h2>
+<h1>LOGIN</h1>
 
-<form action="login.php" method="POST" onsubmit="return kontrol()">
+<p>
+Portfolio sistemine giriş yapın
+</p>
 
-<input type="text" name="email" placeholder="Email" class="form-control" id="email">
-<div id="emailHata" class="error"></div>
+<form action="login.php" method="POST">
 
-<input type="password" name="sifre" placeholder="Şifre" class="form-control" id="sifre">
-<div id="sifreHata" class="error"></div>
+<div class="input-box">
 
-<button class="btn btn-login">Giriş Yap</button>
+<i class="fa-solid fa-envelope"></i>
 
-</form>
+<input
+type="email"
+name="email"
+placeholder="Email"
+required>
 
 </div>
 
-<script>
+<div class="input-box">
 
-function kontrol(){
+<i class="fa-solid fa-lock"></i>
 
-let email=document.getElementById("email").value;
-let sifre=document.getElementById("sifre").value;
+<input
+type="password"
+name="sifre"
+placeholder="Şifre"
+required>
 
-let hata=false;
+</div>
 
-document.getElementById("emailHata").innerText="";
-document.getElementById("sifreHata").innerText="";
+<button class="login-btn">
+Giriş Yap
+</button>
 
-if(email==""){
-document.getElementById("emailHata").innerText="Email boş bırakılamaz";
-hata=true;
-}
-else if(!email.includes("@sakarya.edu.tr")){
-document.getElementById("emailHata").innerText="Okul maili gir";
-hata=true;
-}
+</form>
 
-if(sifre==""){
-document.getElementById("sifreHata").innerText="Şifre boş";
-hata=true;
-}
+<div class="back-home">
 
-return !hata;
+<a href="index.html">
+← Ana Sayfaya Dön
+</a>
 
-}
+</div>
 
-</script>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
